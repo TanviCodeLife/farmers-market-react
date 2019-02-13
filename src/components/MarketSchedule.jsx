@@ -5,7 +5,8 @@ import MarketScheduleList from './MarketScheduleList';
 
 function MarketSchedule(){
   const marketScheduleStyle = {
-    backgroundColor: 'blue'
+    backgroundColor: '#ffedcc',
+    padding: '25'
   };
 
   return (

@@ -11,7 +11,7 @@ function App(){
 
   return (
     <div>
-      <style global jsx>{`
+      <style jsx>{`
     body {
       margin: 0;
     }

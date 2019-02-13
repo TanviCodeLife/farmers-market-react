@@ -1,23 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import 'materialize-css/dist/css/materialize.min.css';
+import {Card} from 'react-materialize';
 
 function EachDaySchedule({day, location, hours, booth}){
   return(
-    <div className="red-color">
-      <style jsx global>{`
-    .red-color {
-    background-color: green;
-    }
-    .red-color:hover {
-    background-color: blue;
-    }
-    `}</style>
-      <p>{day}</p>
-      <p>{location}</p>
-      <p>{hours}</p>
-      <p>{booth}</p>
-      <hr/>
+    <div>
+      <p>
+        {day}
+        <br/>
+        {location}
+        <br/>
+        {hours}
+        <br/>
+        {booth}
+      </p>
     </div>
+
   );
 }
 

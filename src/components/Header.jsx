@@ -1,16 +1,18 @@
 import React from 'react';
-import Name from './Name';
+import 'materialize-css/dist/css/materialize.min.css';
+import {Navbar, NavItem, Icon} from 'react-materialize';
 
 function Header(){
-  const headerStyle = {
-    backgroundColor: 'gray',
-    width: '100%',
-    padding: '30'
+  const navbarStyle = {
+    backgroundColor: '#ffc04c'
   };
-
   return (
-    <div style={headerStyle}>
-      <Name/>
+    <div>
+      <Navbar icon='spa' brand='My Organics' left style={navbarStyle}>
+        <NavItem href='get-started.html'>Market</NavItem>
+        <NavItem href='components.html'>Produce</NavItem>
+        <NavItem><Icon>spa</Icon></NavItem>
+      </Navbar>
     </div>
   );
 }

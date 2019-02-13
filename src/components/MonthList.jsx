@@ -1,5 +1,7 @@
 import React from 'react';
 import EachMonthProduce from './EachMonthProduce';
+import 'materialize-css/dist/css/materialize.min.css';
+import {Collapsible} from 'react-materialize';
 
 const availableProduce = [
   {
@@ -273,13 +275,20 @@ const availableProduce = [
 function MonthList(){
   return(
     <div>
-      <hr/>
-      {availableProduce.map((eachMonth, index) =>
-        <EachMonthProduce month={eachMonth.month}
-          selection={eachMonth.selection}
-          key={index}/>
-      )}
+      <Collapsible>
+        {availableProduce.map((eachMonth, index) =>
+          <EachMonthProduce month={eachMonth.month}
+            selection={eachMonth.selection}
+            key={index}/>
+        )}
+      </Collapsible>
     </div>
+
+
+
+
+
+
   );
 }
 

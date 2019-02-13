@@ -1,19 +1,25 @@
 import React from 'react';
+import 'materialize-css/dist/css/materialize.min.css';
+import {Dropdown, Button, NavItem} from 'react-materialize';
 
 function MarketDropdown(){
+  const dropdownStyle = {
+    marginTop: '15',
+    height: '50'
+  };
 
   return (
-    <div>
-      <label for="location">Location:</label>
-      <select>
-        <option>Lents International</option>
-        <option>Pioneer Courthouse Square</option>
-        <option>Hillsboro</option>
-        <option>Shemanski Park</option>
-        <option>Northwest Portland</option>
-        <option>Beaverton</option>
-      </select>
-    </div>
+    <Dropdown trigger={
+      <Button style={dropdownStyle}>Select Market</Button>
+    } >
+      <NavItem>Lents International</NavItem>
+      <NavItem>Pioneer Courthouse Square</NavItem>
+      <NavItem>Hillsboro</NavItem>
+      <NavItem>Shemanski Park</NavItem>
+      <NavItem>Northwest Portland</NavItem>
+      <NavItem>Beaverton</NavItem>
+
+    </Dropdown>
   );
 }
 

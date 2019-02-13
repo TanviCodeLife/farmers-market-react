@@ -1,23 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import 'materialize-css/dist/css/materialize.min.css';
+import {CollapsibleItem} from 'react-materialize';
 
 function EachMonthProduce({month, selection}){
   return(
-    <div className="red-color">
-      <style jsx global>{`
-    .red-color {
-    background-color: red;
-    }
-    .red-color:hover {
-    background-color: blue;
-    }
-    `}</style>
-      <p>{month}</p>
-      <p>{selection}</p>
-      <hr/>
-    </div>
+    <CollapsibleItem header={month} icon='calendar_today'>
+      <ul>{selection.map((produce, index) =>
+        <li value={index}>{produce}
+        </li>
+      )}</ul>
+    </CollapsibleItem>
   );
 }
+
 
 EachMonthProduce.propTypes = {
   month: PropTypes.string.isRequired,

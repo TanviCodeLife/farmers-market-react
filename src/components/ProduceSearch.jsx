@@ -1,15 +1,15 @@
 import React from 'react';
+import 'materialize-css/dist/css/materialize.min.css';
+import {Input, Icon} from 'react-materialize';
 
 function ProduceSearch(){
   const searchBoxStyles = {
-    borderRadius: '10',
-    padding: '5'
+    boxShadow: '3px 3px 3px 3px rgba(0, 0, 0, .2)',
+    backgroundColor: 'white',
+    width: '50%'
   };
   return (
-    <div>
-      <label for="search">Search</label>
-      <input value="Search"/>
-    </div>
+    <Input s={6} label="Search Produce" validate style={searchBoxStyles}><Icon>search</Icon></Input>
   );
 }
 

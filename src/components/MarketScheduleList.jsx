@@ -1,5 +1,7 @@
 import React from 'react';
 import EachDaySchedule from './EachDaySchedule';
+import 'materialize-css/dist/css/materialize.min.css';
+import {Col} from 'react-materialize';
 
 const marketSchedule = [
   {
@@ -43,14 +45,15 @@ const marketSchedule = [
 function MarketScheduleList(){
   return(
     <div>
-      <hr/>
-      {marketSchedule.map((day, index) =>
-        <EachDaySchedule day={day.day}
-          location={day.location}
-          hours={day.hours}
-          booth={day.booth}
-          key={index}/>
-      )}
+      <Col m={7} s={12}>
+        {marketSchedule.map((day, index) =>
+          <EachDaySchedule day={day.day}
+            location={day.location}
+            hours={day.hours}
+            booth={day.booth}
+            key={index}/>
+        )}
+      </Col>
     </div>
   );
 }
